@@ -1,0 +1,26 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	margin: 20px;
+}
+.navigation {
+	max-width: 600px;
+	margin: auto;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.button {
+	display: block;
+	padding: 10px;
+	margin: 10px 0;
+	text-align: center;
+	color: #fff;
+	background-color: #8499af;
+	text-decoration: none;
+	border-radius: 5px;
+}
+.button:hover {
+	background-color: #404e5e;
+}

@@ -1,0 +1,56 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 20px;
+}
+.logout {
+	margin-top: 20px;
+}
+.form-container {
+	max-width: 400px;
+	margin-bottom: 40px;
+}
+.form-container h1 {
+	text-align: center;
+}
+.form-container form {
+	display: flex;
+	flex-direction: column;
+}
+.form-container label {
+	margin-top: 10px;
+}
+.form-container input[type='text'],
+.form-container input[type='password'] {
+	padding: 8px;
+	margin-top: 5px;
+}
+.form-container input[type='submit'] {
+	margin-top: 15px;
+	padding: 10px;
+}
+.message {
+	color: red;
+	text-align: center;
+}
+.success {
+	color: green;
+	text-align: center;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+table,
+th,
+td {
+	border: 1px solid #ddd;
+}
+th,
+td {
+	padding: 8px;
+	text-align: left;
+}
+th {
+	background-color: #f2f2f2;
+}
