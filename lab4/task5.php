@@ -2,37 +2,39 @@
 <?php 
 require("../config.php");
 echo "<h1>Task 5.1</h1>";
-$desserts = array(
-    array("name"=>"Cake", "price"=>3.5, "calories"=>300),
-    array("name"=>"Ice cream", "price"=>2.0, "calories"=>200),
-    array("name"=>"Cheesecake", "price"=>4.0, "calories"=>400),
-    array("name"=>"Chocolate", "price"=>2.5, "calories"=>250),
-    array("name"=>"Fruit salad", "price"=>3.0, "calories"=>150)
+ 
+echo "<h1>Інформація про авторів</h1>";
+
+ 
+$authors = array(
+    array("lastName" => "Шевченко", "firstName" => "Тарас", "booksCount" => 3),
+    array("lastName" => "Franko", "firstName" => "Іван", "booksCount" => 5),
+    array("lastName" => "Коцюбинський", "firstName" => "Михайло", "booksCount" => 2),
+    array("lastName" => "Нечуй-Левицький", "firstName" => "Іван", "booksCount" => 4),
+    array("lastName" => "Лесі Українки", "firstName" => "Леся", "booksCount" => 1)
 );
 
-$max_price = 0;
-$max_calories = 0;
-$max_price_name = "";
-$max_calories_name = "";
+ 
+echo "<table border='1'>";
+echo "<tr><th>Прізвище</th><th>Ім'я</th><th>Кількість книг</th></tr>";
+foreach ($authors as $author) {
+    echo "<tr>";
+    echo "<td>" . $author["lastName"] . "</td>";
+    echo "<td>" . $author["firstName"] . "</td>";
+    echo "<td>" . $author["booksCount"] . "</td>";
+    echo "</tr>";
+}
+echo "</table>";
 
-foreach ($desserts as $dessert) {
-    echo $dessert["name"] . ": " . $dessert["price"] . "$, " . $dessert["calories"] . "Cal<br>"; 
-    if ($dessert["price"] > $max_price) {
-        $max_price = $dessert["price"];
-        $max_price_name = $dessert["name"];
-    }
-    if ($dessert["calories"] > $max_calories) {
-        $max_calories = $dessert["calories"];
-        $max_calories_name = $dessert["name"];
+ 
+$countMoreThanTwoBooks = 0;
+foreach ($authors as $author) {
+    if ($author["booksCount"] > 2) {
+        $countMoreThanTwoBooks++;
     }
 }
-
-if ($max_price_name == $max_calories_name) {
-    echo "The most expensive dessert is also the most caloric one: " . $max_price_name . ".";
-} else {
-    echo "The most expensive dessert is not the most caloric one. The most expensive dessert is " . $max_price_name . " and the most caloric one is " . $max_calories_name . ".";
-}
-
+echo "<p>Кількість авторів, які опублікували більше двох книг: $countMoreThanTwoBooks</p>";
+ 
 
 
 

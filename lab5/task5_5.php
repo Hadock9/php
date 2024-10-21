@@ -7,7 +7,7 @@ $words = explode(' ', $text);
 $found_words = array();
 
 foreach ($words as $word) {
-    if (substr($word, 0, 1) == "M" or substr($word, 0, 1) == "m") {
+    if (substr($word, 0, 1) == "V" or substr($word, 0, 1) == "v") {
         $found_words[] = $word;
     }
 }

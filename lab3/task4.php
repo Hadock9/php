@@ -1,52 +1,65 @@
 <a href="index_lab3.php" class="style_button">lab 3</a>
 <?php
-    require("../config.php");
+require("../config.php");
 
-    function task_4_var_8(){
-        $dist = 10;
-        $result = 50;
-        $count = 0;
-        while($dist < $result){
-            $dist += $dist * 0.1;
-            $count += 1;
-        }
-    
-        echo "<p>The runner runs 50 km by " . $count . " days</p>";
-    }
-    
-    function task_4_var_9(){
-        $sum = 0;
-        $prod = 1;
-        for($i = 0; $i <= 20; $i++){
-            if($i % 2 == 0){
-                $sum += $i;
-            }
-            else{
-                $prod *= $i;
-            }
-        }
-    
-        echo "<p> The sum of even numbers is " . $sum ."</p>";
-        echo "<p> The product of of odd numbers is " . $prod ."</p>";  
-    }
-    
-    function task_4_var_10(){
+// Завдання 1: Накопичення на депозитному рахунку
+function depositAccumulation() {
+    $initialAmount = 200; 
+    $monthlyDeposit = $initialAmount;  
+    $interestRate = 0.12; 
+    $months = 5 * 12;  
+
+    $totalAmount = 0; 
+    for ($i = 0; $i < $months; $i++) {
         
-        echo "<table>";
-        echo "<tr><th>x</th><th>y</th></tr>";
-        for ($x = 0; $x <= 4; $x += 0.5) {
-            $y = 2 * $x;
-            echo "<tr><td>$x</td><td>$y</td></tr>";
-        }
-        echo "</table>";
-    
-    
+        $totalAmount += $monthlyDeposit;
+        
+      
+        $totalAmount += ($totalAmount * ($interestRate / 12));
+        
+       
+        $monthlyDeposit *= 1.2;
     }
 
-    echo "<h2>Var 8</h2>";
-    task_4_var_8();
-    echo "<h2>Var 9</h2>";
-    task_4_var_9();
-    echo "<h2>Var 9</h2>";
-    task_4_var_10();
+    echo "<p>Сума на депозитному рахунку через 5 років: " . round($totalAmount, 2) . " грн</p>";
+}
+
+// Завдання 2: Сума та кількість парних чисел в діапазоні від 50 до 100
+function evenNumbersSumAndCount() {
+    $sum = 0;
+    $count = 0;
+
+    for ($i = 50; $i <= 100; $i++) {
+        if ($i % 2 == 0) {
+            $sum += $i;
+            $count++;
+        }
+    }
+
+    echo "<p>Сума парних чисел від 50 до 100: " . $sum . "</p>";
+    echo "<p>Кількість парних чисел від 50 до 100: " . $count . "</p>";
+}
+
+// Завдання 3: Визначити n, при якому сума квадратів натурального ряду 1..n менша за N
+function findNForSumOfSquares() {
+    $N = 50;  
+    $sumOfSquares = 0;
+    $n = 0;
+
+    while ($sumOfSquares < $N) {
+        $n++;
+        $sumOfSquares += $n * $n; 
+    }
+
+    echo "<p>Найбільше n, при якому сума квадратів натурального ряду 1..n менша за " . $N . ": " . ($n - 1) . "</p>";
+}
+
+echo "<h2>Завдання 1: Накопичення на депозитному рахунку</h2>";
+depositAccumulation();
+
+echo "<h2>Завдання 2: Сума та кількість парних чисел</h2>";
+evenNumbersSumAndCount();
+
+echo "<h2>Завдання 3: Визначити n для суми квадратів</h2>";
+findNForSumOfSquares();
 ?>
