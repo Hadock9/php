@@ -16,6 +16,7 @@ require("../config.php");
         <a class="button" class="button" href="task2.php">Task 2</a>
         <a class="button" class="button" href="task3.php">Task 3</a>
         <a class="button" class="button" href="task4.php">Task 4</a>
+        <a class="button" class="button" href="task5.php">Task 5</a>
     </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <?php
 require("../config.php");
 
-$text = file_get_contents("files/Voloshchuk_text.txt");
+$text = file_get_contents("files/Falovskij_text.txt");
 
 $words = explode(" ", $text);
 

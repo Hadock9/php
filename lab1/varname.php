@@ -11,7 +11,7 @@ $num = 1;
 $varName = "var" . $num;
 
 
-echo $$varName . " " . $var2;
+echo $varName . " " . $var2;
 
 
 ?>

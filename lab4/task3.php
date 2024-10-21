@@ -10,14 +10,14 @@
         5 => "ялинка",
         6 => "яворина"
     );
-    echo "<h3>My array</h3>";
+    echo "<h3>My array foreach</h3>";
     foreach ($my_topic as $index => $element) {
         echo "Індекс:<b> $index</b>, значення: <b> $element </b> <br><br>";
     }
 
     $flipped_arr = array_flip($my_topic);
 
-    echo "<h3>My flipped array</h3>";
+    echo "<h3>My array  flip foreach</h3>";
     foreach($flipped_arr as $index => $element){
         echo "Індекс: <b>$index</b>, значення:<b> $element </b><br><br>";
     }

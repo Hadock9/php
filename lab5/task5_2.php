@@ -1,7 +1,7 @@
 <a href='index_lab5.php' class='style_button'>lab 5</a>
 <?php
 
-$text = file_get_contents('files/Voloshchuk_text.txt');
+$text = file_get_contents('files/Falovskij_text.txt');
 
 $words = explode(" ", $text);
 

@@ -16,7 +16,7 @@ require("../config.php");
 
 <ul>
     <li> <a class="button" href="echo.php">Echo operator</a> </li>
-    <li> <a class="button" href="varname.php">Varname</a> </li>
+    <li> <a class="button" href="varname.php">Varname</a> </li> 
     <li> <a class="button" href="pointer.php">Pointer</a> </li>
     <li> <a class="button" href="cat.php">Concatenation</a> </li>
     <li> <a class="button" href="cast.php">Cast</a> </li>
@@ -30,13 +30,8 @@ require("../config.php");
     
 </ul>
 
-<a class="button" href="example1_1_5_1.php">Доступ до змінних форми post (приклад 1.1.5.1) </a> 
-<a class="button" href="example1_1_5_2.php">Доступ до змінних форми get (приклад 1.1.5.2)</a> 
-<a class="button" href="operator_if.php">if, eseif, else (приклади з 1.1.15,1.1.16,1.1.17, 1.1.18 )</a> 
-<a class="button" href="operator_switch.php">switch (приклад 1.1.19)</a><br>
-
  
-</div>
-    </div>
+ 
+ 
 </body>
 </html>
